@@ -1,4 +1,5 @@
 import smbus
+import time
 
 class PCF8591:
 
@@ -32,4 +33,6 @@ class Joystick:
 
 address=0x48
 JoystickLocation= Joystick(address)
-print(JoystickLocation.getX())
+while (1):
+  print(JoystickLocation.getX(),',', str(JoystickLocation.getY()).rjust(4))
+  time.sleep(.1)
