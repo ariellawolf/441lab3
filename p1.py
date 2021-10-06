@@ -34,5 +34,5 @@ class Joystick:
 address=0x48
 JoystickLocation= Joystick(address)
 while (1):
-  print(JoystickLocation.getX(),',', str(JoystickLocation.getY()).rjust(4))
+  print(':s, :s',.format(str(JoystickLocation.getX()), str(JoystickLocation.getY()).rjust(6)))
   time.sleep(.1)
